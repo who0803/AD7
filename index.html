@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>CSS Flex</title>
+	<link rel="stylesheet" href="default.css">
+	<link rel="stylesheet" href="ui.css">
+</head>
+
+<body>
+	<div class="page">
+		<!-- header -->
+		<header class="header">
+			<h1 class="website-title">AD7</h1>
+			<!-- <div id="modal-switch">⚑</div> -->
+		</header>
+
+
+		<!-- <div class="content-container"> -->
+		<!-- primary -->
+		<section class="primary">
+
+			<div class="album">
+				<div class='imgOrder'></div>
+				<div class="images">
+					<img src="images/flower.jpg">
+					<img src="images/fox.jpg">
+					<img src="images/lightning.jpg">
+					<img src="images/moon.jpg">
+					<img src="images/nature.jpg">
+					<img src="images/space.jpg">
+				</div>
+			</div>
+
+
+			<div class="search-form">
+				<input type="search" placeholder=" 검색해주세요">
+				<button class='mainSearch' >검색</button>
+			</div>
+
+			
+			
+			
+		</section>
+
+
+
+
+		<!-- menu -->
+		<ul class="menu">
+			<li class="menu-item chat">
+				<a href="#" class="menu-link">채팅</a>
+			</li>
+			<li class="menu-item">
+				<a href="#" class="menu-link">강의</a>
+			</li>
+			<li class="menu-item">
+				<a href="#" class="menu-link">찜</a>
+			</li>
+			<li class="menu-item">
+				<a href="#" class="menu-link">내정보</a>
+			</li>
+		</ul>
+		<div id='my_div'>
+		</div>
+	</div>
+	<script src="slideShow.js"></script>
+	<script src="lecture.js"></script>
+	<script>
+		const btn = document.querySelector('.mainSearch');
+		const input = document.querySelector('input');
+		btn.addEventListener('click', function() {
+			localStorage.setItem('search', input.value)
+			location.href = 'search.html';
+		});
+
+		const chat = document.querySelector('.chat');
+		chat.addEventListener('click', function() {
+			location.href = 'chat.html';
+		});
+
+	</script>
+</body>
+
+</html>

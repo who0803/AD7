@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Flex</title>
+    <link rel="stylesheet" href="default.css">
+    <link rel="stylesheet" href="ui.css">
+    <style>
+        .header {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 90px;
+            padding: 0.3rem 0.3rem;
+        }
+
+        .search-form {
+            display: flex;
+            height: 40px;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .options {
+            display: flex;
+            position: relative;
+            height: 40px;
+            width: 100%;
+            font-weight: bolder;
+            margin-top: 5px;
+        }
+
+        .option1 {
+            position: absolute;
+            left: 15%;
+            top: 25%;
+        }
+
+        .option2 {
+            position: absolute;
+            right: 15%;
+            top: 25%;
+        }
+
+        .arrow {
+            height: 40px;
+            width: auto;
+        }
+
+        .actBorderBot {
+            border-bottom: 3px black solid;
+            padding-bottom: 5px;
+        }
+
+        .primary {
+            margin-top: 90px;
+            overflow-x: hidden;
+            overflow-y: auto;
+            flex: 1 auto;
+        }
+
+        .lecContainer2 {
+            width: 100%;
+            height: 100%;
+        }
+
+        .lecList2 {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .lec2 {
+
+            display: flex;
+            flex-direction: column;
+            margin: 10px;
+        }
+
+        .lecImg2 {
+            width: 160px;
+            height: 104px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page">
+        <!-- header -->
+        <header class="header">
+            <div class="search-form">
+                <img class="arrow" src="images/back_arrow.png" alt="">
+                <input type="search">
+                <button class='mainSearch'>검색</button>
+            </div>
+            <div class="options">
+                <div class="option1 actBorderBot">
+                    강 의
+                </div>
+                <div class="option2">
+                    수요조사
+                </div>
+            </div>
+        </header>
+
+
+        <!-- <div class="content-container"> -->
+        <!-- primary -->
+        <section class="primary"></section>
+    </div>
+    <script>
+        const search = localStorage.getItem('search');
+        const input = document.querySelector('input');
+        input.value = search;
+        const opt1 = document.querySelector('.option1');
+        const opt2 = document.querySelector('.option2');
+        const primary = document.querySelector('.primary');
+        const arrow = document.querySelector('.arrow');
+        const mainSearch = document.querySelector('.mainSearch');
+
+
+        arrow.addEventListener('click', function () {
+            location.href = 'index.html';
+        });
+
+        opt1.addEventListener('click', function () {
+            opt1.classList.add('actBorderBot');
+            opt2.classList.remove('actBorderBot');
+            primary.innerHTML = "";
+            createLec2(obj);
+        });
+        opt2.addEventListener('click', function () {
+            opt2.classList.add('actBorderBot');
+            opt1.classList.remove('actBorderBot');
+            primary.innerHTML = "";
+            createLec3(obj);
+        });
+
+        mainSearch.addEventListener('click', function () {
+            localStorage.setItem('search', input.value)
+            location.href = 'search.html';
+        });
+
+        obj = {
+            '0': {
+                img: "images/flower.jpg",
+                name: "꽃을 심어봐요",
+                price: 5000,
+            },
+            '1': {
+                img: "images/flower.jpg",
+                name: "꽃을 심어봐요",
+                price: 5000
+            },
+            '2': {
+                img: "images/flower.jpg",
+                name: "꽃을 심어봐요",
+                price: 5000
+            },
+            '3': {
+                img: "images/flower.jpg",
+                name: "꽃을 심어봐요",
+                price: 5000
+            },
+            '4': {
+                img: "images/flower.jpg",
+                name: "꽃을 심어봐요",
+                price: 5000
+            },
+            '5': {
+                img: "images/flower.jpg",
+                name: "꽃을 심어봐요",
+                price: 5000
+            },
+            '6': {
+                img: "images/flower.jpg",
+                name: "꽃을 심어봐요",
+                price: 5000
+            },
+            '7': {
+                img: "images/flower.jpg",
+                name: "꽃을 심어봐요",
+                price: 5000
+            },
+            '8': {
+                img: "images/flower.jpg",
+                name: "꽃을 심어봐요",
+                price: 5000
+            },
+            '9': {
+                img: "images/flower.jpg",
+                name: "꽃을 심어봐요",
+                price: 5000
+            },
+            '10': {
+                img: "images/flower.jpg",
+                name: "꽃을 심어봐요",
+                price: 5000
+            },
+        }
+
+
+
+        function createLec2(obj) {
+            const lecContainer2 = document.createElement('div');
+            lecContainer2.classList.add('lecContainer2');
+
+            const lecList2 = document.createElement('div');
+            lecList2.classList.add('lecList2');
+
+            for (key in obj) {
+                const a = document.createElement('a');
+                a.href = "signUp.html";
+                const lec2 = document.createElement('div');
+                lec2.classList.add('lec2');
+
+                const lecImg2 = document.createElement('div');
+                lecImg2.classList.add('lecImg2');
+                lecImg2.style.backgroundImage = "url(" + obj[key].img + ")";
+
+
+                const lecDesc2 = document.createElement('div');
+                lecDesc2.classList.add('lecDesc2');
+
+                const lectName2 = document.createElement('div');
+                lectName2.classList.add('lectName2');
+                lectName2.innerHTML = obj[key].name;
+
+                const lecPrice2 = document.createElement('div');
+                lecPrice2.classList.add('lecPrice2');
+                lecPrice2.innerHTML = obj[key].price + "원";
+
+                lecDesc2.appendChild(lectName2);
+                lecDesc2.appendChild(lecPrice2);
+                lec2.appendChild(lecImg2);
+                lec2.appendChild(lecDesc2);
+                a.appendChild(lec2);
+                lecList2.appendChild(a);
+            }
+
+            lecContainer2.appendChild(lecList2);
+            primary.appendChild(lecContainer2);
+        }
+
+        function createLec3(obj) {
+            const lecContainer2 = document.createElement('div');
+            lecContainer2.classList.add('lecContainer2');
+
+            const lecList2 = document.createElement('div');
+            lecList2.classList.add('lecList2');
+
+            for (key in obj) {
+                const a = document.createElement('a');
+                a.href = "demandResearch.html";
+                const lec2 = document.createElement('div');
+                lec2.classList.add('lec2');
+
+                const lecImg2 = document.createElement('div');
+                lecImg2.classList.add('lecImg2');
+                lecImg2.style.backgroundImage = "url(" + obj[key].img + ")";
+
+
+                const lecDesc2 = document.createElement('div');
+                lecDesc2.classList.add('lecDesc2');
+
+                const lectName2 = document.createElement('div');
+                lectName2.classList.add('lectName2');
+                lectName2.innerHTML = obj[key].name;
+
+                const lecPrice2 = document.createElement('div');
+                lecPrice2.classList.add('lecPrice2');
+                lecPrice2.innerHTML = "수요조사중";
+
+                lecDesc2.appendChild(lectName2);
+                lecDesc2.appendChild(lecPrice2);
+                lec2.appendChild(lecImg2);
+                lec2.appendChild(lecDesc2);
+                a.appendChild(lec2);
+                lecList2.appendChild(a);
+            }
+
+            lecContainer2.appendChild(lecList2);
+            primary.appendChild(lecContainer2);
+        }
+
+        createLec2(obj); // 처음에 띄어줌
+    </script>
+</body>
+
+</html>
