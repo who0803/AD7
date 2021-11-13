@@ -1,0 +1,54 @@
+.arrow {
+    position: absolute;
+    height: 40%;
+    width: auto;
+    left: 10px;
+}
+
+.lecList {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0.5rem 0.5rem;
+}
+
+.lec {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 1rem;
+}
+
+.lecImg {
+    /*min-width: 140px;
+    min-height: 91px;*/
+    height: 0;	
+    padding-bottom: 60%;
+    margin-bottom: 7px;
+}
+.lecDesc {
+    font-weight: bolder;
+    flex: 1 1 auto;	/*길이가 늘어남. 부모가 스트레치로 늘어나서*/
+}
+.lectName {
+    /*max-width: 130px;*/
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: pre-wrap;
+    margin-bottom: 4px;
+}
+.lecProgress {
+    margin-bottom: 4px;
+}
+
+progress {
+  -webkit-appearance: none;
+  width: 100%;
+}
+
+::-webkit-progress-bar {
+    background-color: white;
+}
+
+::-webkit-progress-value {
+    background-color: rgb(32, 211, 175);
+}

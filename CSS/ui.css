@@ -1,0 +1,102 @@
+.page {
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	width: 100vw;
+	overflow-x: hidden;
+	/*overflow-y: hidden;*/
+}
+.header	{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	/* justify-content: space-between; 이렇게 해도됨*/
+	width: 100%;
+	height: 66px;
+	background-color: rgb(32, 211, 175);
+	color: white;
+	position: fixed;
+}
+
+.primary {
+	margin-top: 66px;
+	margin-bottom: 66px;
+	overflow-x: hidden;
+	flex: 1 auto;
+}
+
+/* 밑 menu */
+.menu {
+	display: flex;
+	width: 100%;
+	height: 66px;
+	background: rgb(32, 211, 175);
+	position: fixed;
+	bottom: 0;
+	font-weight: bolder;
+}
+.menu-item {
+	flex-grow: 1; 
+	color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	font-size: 1rem;
+	cursor: pointer;
+}
+.menu-item .fas {
+	font-size: 1.5rem;
+	margin-bottom: 2px;
+}
+
+/* search */
+.search-form {
+	display: flex;
+	height: 40px;
+	width: 90%;
+	margin: 30px auto;
+	border-radius: 0.3em;
+	border: 1px gray solid;
+	box-sizing: content-box;
+}
+.search-form input[type="search"] {
+	flex: 1;
+	min-width: 0;
+	margin-right: 5px;
+	font-size: 1rem;
+	border: none;
+	box-sizing: content-box;
+}
+.search-form .mainSearch {
+	width: 15%;
+	font-size: 1.2rem;
+	background: rgb(32, 211, 175);
+	color: white;
+	border: none;
+	box-sizing: content-box;
+	cursor: pointer;
+}
+
+/*링크 눌렀을 때 */
+a:link {
+	color : black;
+	text-decoration: none;
+}
+a:visited {
+	color : black;
+	text-decoration: none;
+}
+a:hover {
+	color : black;
+	text-decoration: underline;
+}
+a:active {
+	color : black;
+	text-decoration: none;
+}
+
+
+
+
+

@@ -1,0 +1,107 @@
+.primary {
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+.lecContainer {
+    min-height: 18vh;
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+    padding: 0 1.7rem;
+}
+
+/*강의 박스*/
+
+
+.lecName {
+    font-size: 1rem;
+    font-weight: bolder;
+    padding-bottom: 0.6rem;
+    border-bottom: 0.5px solid lightgray;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: pre-wrap;
+    height: 40%;
+}
+
+.lecNavBox {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bolder;
+    font-size: 1.3rem;
+    height: 40%;
+    margin-top: 1rem;
+}
+
+.lecBtn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    width: 33.33%;
+    border: 0;
+    font-weight: bolder;
+    color: gray;
+    padding: 0.3rem;
+}
+
+.lecDesc {
+    position: sticky;
+    top: 0px;
+    background-color: white;
+    color: rgb(152, 152, 152);
+    display: flex;
+    justify-content: space-evenly;
+    height: 50px;
+    font-size: 1.2rem;
+    padding: 10px 0;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+.act {
+    color:black;
+    font-weight: bolder;
+}
+
+/*강의 목록*/
+.list {
+    display: flex;
+    flex-direction: column;
+}
+.lec {
+    display: flex;
+    padding-left: 20px;
+    padding-right: 20px;
+    align-items: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 0.1px lightgray solid;
+}
+.lecListLecName {
+    padding-left: 1rem;
+    color: gray;
+}
+
+.actlect {
+    background-color: rgb(228, 255, 249);
+}
+.actlect .lecListLecName {
+    color: black;
+    font-weight: bolder;
+}
+
+/*동영상*/
+.iframebox {
+    
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+}
+
+.iframebox iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
