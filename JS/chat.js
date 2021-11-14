@@ -5,59 +5,34 @@ const primary = document.querySelector('.primary');
         });
         obj = {
             '0': {
-                img: "images/flower.jpg",
-                lecName: "꽃을 심어봐요",
-                teacher: "홍길동"
+                img: "images/pro/1.png",
+                lecName: "프로그래밍?파이썬으로 시작!",
+                teacher: "이민규"
             },
             '1': {
-                img: "images/flower.jpg",
-                lecName: "꽃을 심어봐요",
-                teacher: "홍길동"
+                img: "images/rare/5.jpg",
+                lecName: "카페사장의 바리스타 특강",
+                teacher: "김민수"
             },
             '2': {
-                img: "images/flower.jpg",
-                lecName: "꽃을 심어봐요",
-                teacher: "홍길동"
+                img: "images/rare/8.jpg",
+                lecName: "토익독학으로 990점달성, 노하우공유!",
+                teacher: "정토익"
             },
             '3': {
-                img: "images/flower.jpg",
-                lecName: "꽃을 심어봐요",
-                teacher: "홍길동"
+                img: "images/pro/9.png",
+                lecName: "신부자의 c#기초 강의",
+                teacher: "신부자"
             },
             '4': {
-                img: "images/flower.jpg",
-                lecName: "꽃을 심어봐요",
-                teacher: "홍길동"
+                img: "images/rare/9.jpg",
+                lecName: "과거 대기업 면접관의 자기소개특강",
+                teacher: "유삼성"
             },
             '5': {
-                img: "images/flower.jpg",
-                lecName: "꽃을 심어봐요",
-                teacher: "홍길동"
-            },
-            '6': {
-                img: "images/flower.jpg",
-                lecName: "꽃을 심어봐요",
-                teacher: "홍길동"
-            },
-            '7': {
-                img: "images/flower.jpg",
-                lecName: "꽃을 심어봐요",
-                teacher: "홍길동"
-            },
-            '8': {
-                img: "images/flower.jpg",
-                lecName: "꽃을 심어봐요",
-                teacher: "홍길동"
-            },
-            '9': {
-                img: "images/flower.jpg",
-                lecName: "꽃을 심어봐요",
-                teacher: "홍길동"
-            },
-            '10': {
-                img: "images/flower.jpg",
-                lecName: "꽃을 심어봐요",
-                teacher: "홍길동"
+                img: "images/pro/10.png",
+                lecName: "비전공자들을 위한 JS클래스!",
+                teacher: "박여사"
             },
             
         }
@@ -72,6 +47,7 @@ const primary = document.querySelector('.primary');
             for (key in obj) {
                 const chat = document.createElement('div');
                 chat.classList.add('chat');
+                chat.dataset.key = key;
 
                 const chatImg = document.createElement('div');
                 chatImg.classList.add('chatImg');
@@ -97,7 +73,7 @@ const primary = document.querySelector('.primary');
 
                 chat.addEventListener('click', function() {
                     // 나중에 시간 나면 구현
-                    localStorage.setItem('teacherName', obj[key].teacher);
+                    localStorage.setItem('teacherName', obj[chat.dataset.key].teacher);
                     location.href = 'chatScreen.html';
                 });
 

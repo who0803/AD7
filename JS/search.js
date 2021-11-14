@@ -34,128 +34,72 @@ mainSearch.addEventListener('click', function () {
 
 obj = {
     '0': {
-        img: "images/flower.jpg",
-        name: "어드벤처 디자인",
-        price: 5000,
+        img: "images/pro/1.png",
+        name: "프로그래밍?파이썬으로 시작!",
+        price: 12000,
         star: 5,
     },
     '1': {
-        img: "images/flower.jpg",
-        name: "꽃을 심어봐요",
-        price: 5000,
+        img: "images/pro/2.png",
+        name: "IT취업은 자바! 손쉽게 시작!",
+        price: 20000,
         star: 4,
     },
     '2': {
-        img: "images/flower.jpg",
-        name: "꽃을 심어봐요",
-        price: 5000,
+        img: "images/pro/3.png",
+        name: "코딩테스트 준비해?C++로 준비하자!",
+        price: 8000,
         star: 3,
     },
     '3': {
-        img: "images/flower.jpg",
-        name: "꽃을 심어봐요",
-        price: 5000,
+        img: "images/pro/4.png",
+        name: "30년 개발경력자의 실력향상강의!",
+        price: 10000,
         star: 2,
     },
     '4': {
-        img: "images/flower.jpg",
-        name: "꽃을 심어봐요",
-        price: 5000,
+        img: "images/pro/5.png",
+        name: "트렌드언어 파이썬-Django로 취업하자!",
+        price: 20000,
         star: 1,
     },
     '5': {
-        img: "images/flower.jpg",
-        name: "꽃을 심어봐요",
-        price: 5000,
-        star: 0,
-    },
-    '6': {
-        img: "images/flower.jpg",
-        name: "꽃을 심어봐요",
-        price: 5000,
-        star: 5,
-    },
-    '7': {
-        img: "images/flower.jpg",
-        name: "꽃을 심어봐요",
-        price: 5000,
-        star: 5,
-    },
-    '8': {
-        img: "images/flower.jpg",
-        name: "꽃을 심어봐요",
-        price: 5000,
-        star: 4,
-    },
-    '9': {
-        img: "images/flower.jpg",
-        name: "꽃을 심어봐요",
-        price: 5000,
-        star: 5,
-    },
-    '10': {
-        img: "images/flower.jpg",
-        name: "꽃을 심어봐요",
-        price: 5000,
-        star: 5,
+        img: "images/pro/10.png",
+        name: "비전공자들을 위한 JS클래스!",
+        progress: 12,
     },
 }
 
 demandObj = {
     '0': {
-        img: "images/flower.jpg",
-        name: "꽃을 심어봐요",
-        progress: 15, // 15일 남음
-    },
-    '1': {
-        img: "images/flower.jpg",
-        name: "꽃을 심어봐요",
-        progress: 25,
-    },
-    '2': {
-        img: "images/flower.jpg",
-        name: "꽃을 심어봐요",
-        progress: 5,
-    },
-    '3': {
-        img: "images/flower.jpg",
-        name: "꽃을 심어봐요",
-        progress: 4,
-    },
-    '4': {
-        img: "images/flower.jpg",
-        name: "꽃을 심어봐요",
-        progress: 20,
-    },
-    '5': {
-        img: "images/flower.jpg",
-        name: "꽃을 심어봐요",
+        img: "images/pro/6.png",
+        name: "취업하고싶어? 스프링 쉽게 배우자!",
         progress: 7,
     },
-    '6': {
-        img: "images/flower.jpg",
-        name: "꽃을 심어봐요",
+    '1': {
+        img: "images/pro/7.png",
+        name: "00회사 개발자 출신 임병철의 입문자용 NodeJS강의",
         progress: 10,
     },
-    '7': {
-        img: "images/flower.jpg",
-        name: "꽃을 심어봐요",
+    '2': {
+        img: "images/pro/8.png",
+        name: "Springboot 로 나만의 블로그 만들자!",
         progress: 3,
     },
-    '8': {
-        img: "images/flower.jpg",
-        name: "꽃을 심어봐요",
+    '3': {
+        img: "images/pro/9.png",
+        name: "신부자의 c#기초 강의",
         progress: 21,
     },
-    '9': {
-        img: "images/flower.jpg",
-        name: "꽃을 심어봐요",
+    '4': {
+        img: "images/pro/10.png",
+        name: "비전공자들을 위한 JS클래스!",
         progress: 12,
     },
-    '10': {
-        img: "images/flower.jpg",
-        name: "꽃을 심어봐요",
-        progress: 15,
+    '5': {
+        img: "images/pro/5.png",
+        name: "트렌드언어 파이썬-Django로 취업하자!",
+        progress: 20,
     },
 }
 

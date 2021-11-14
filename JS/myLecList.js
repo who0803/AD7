@@ -2,103 +2,58 @@ const primary = document.querySelector('.primary');
 const arrow = document.querySelector('.arrow');
 const obj = {
     '0': {
-        img: "images/flower.jpg",
-        name: "꽃을 심어봐요",
+        img: "images/pro/1.png",
+        name: "프로그래밍?파이썬으로 시작!",
         progress: 15, // 15일 남음
         lecArr: ['강좌 소개, 범위: 바이블 강좌, 강좌의 상위 레벨 키워드, 비동기 11단계', 'Class 선언, Class 구조: Class 선언문, Class 표현식', 'Class 작성 기준, computed name',
-        'constructor, constructor 반환', '상속, extends 키워드, 상속 구조, 메소드 오버라이딩', 'getter, setter, static 메소드, 호이스팅', 'super 키워드, constructor 호출', 'Built-in 오브젝트 상속, Object 상속, Image 오브젝트 상속, Audio 오브젝트 상속', 'this 참조, Generator',
-        '강좌 소개, 범위: 바이블 강좌, 강좌의 상위 레벨 키워드, 비동기 11단계', 'Class 선언, Class 구조: Class 선언문, Class 표현식', 'Class 작성 기준, computed name',
-        'constructor, constructor 반환', '상속, extends 키워드, 상속 구조, 메소드 오버라이딩', 'getter, setter, static 메소드, 호이스팅', 'super 키워드, constructor 호출', 'Built-in 오브젝트 상속, Object 상속, Image 오브젝트 상속, Audio 오브젝트 상속', 'this 참조, Generator'],
+            'constructor, constructor 반환', '상속, extends 키워드, 상속 구조, 메소드 오버라이딩', 'getter, setter, static 메소드, 호이스팅', 'super 키워드, constructor 호출', 'Built-in 오브젝트 상속, Object 상속, Image 오브젝트 상속, Audio 오브젝트 상속', 'this 참조, Generator',
+            '강좌 소개, 범위: 바이블 강좌, 강좌의 상위 레벨 키워드, 비동기 11단계', 'Class 선언, Class 구조: Class 선언문, Class 표현식', 'Class 작성 기준, computed name',
+            'constructor, constructor 반환', '상속, extends 키워드, 상속 구조, 메소드 오버라이딩', 'getter, setter, static 메소드, 호이스팅', 'super 키워드, constructor 호출', 'Built-in 오브젝트 상속, Object 상속, Image 오브젝트 상속, Audio 오브젝트 상속', 'this 참조, Generator'],
     },
     '1': {
-        img: "images/flower.jpg",
-        name: "꽃을 심어봐요",
+        img: "images/rare/5.jpg",
+        name: "카페사장의 바리스타 특강",
         progress: 25,
         lecArr: ['강좌 소개, 범위: 바이블 강좌, 강좌의 상위 레벨 키워드, 비동기 11단계', 'Class 선언, Class 구조: Class 선언문, Class 표현식', 'Class 작성 기준, computed name',
-        'constructor, constructor 반환', '상속, extends 키워드, 상속 구조, 메소드 오버라이딩', 'getter, setter, static 메소드, 호이스팅', 'super 키워드, constructor 호출', 'Built-in 오브젝트 상속, Object 상속, Image 오브젝트 상속, Audio 오브젝트 상속', 'this 참조, Generator',
-        '강좌 소개, 범위: 바이블 강좌, 강좌의 상위 레벨 키워드, 비동기 11단계', 'Class 선언, Class 구조: Class 선언문, Class 표현식', 'Class 작성 기준, computed name',
-        'constructor, constructor 반환', '상속, extends 키워드, 상속 구조, 메소드 오버라이딩', 'getter, setter, static 메소드, 호이스팅', 'super 키워드, constructor 호출', 'Built-in 오브젝트 상속, Object 상속, Image 오브젝트 상속, Audio 오브젝트 상속', 'this 참조, Generator'],
+            'constructor, constructor 반환', '상속, extends 키워드, 상속 구조, 메소드 오버라이딩', 'getter, setter, static 메소드, 호이스팅', 'super 키워드, constructor 호출', 'Built-in 오브젝트 상속, Object 상속, Image 오브젝트 상속, Audio 오브젝트 상속', 'this 참조, Generator',
+            '강좌 소개, 범위: 바이블 강좌, 강좌의 상위 레벨 키워드, 비동기 11단계', 'Class 선언, Class 구조: Class 선언문, Class 표현식', 'Class 작성 기준, computed name',
+            'constructor, constructor 반환', '상속, extends 키워드, 상속 구조, 메소드 오버라이딩', 'getter, setter, static 메소드, 호이스팅', 'super 키워드, constructor 호출', 'Built-in 오브젝트 상속, Object 상속, Image 오브젝트 상속, Audio 오브젝트 상속', 'this 참조, Generator'],
     },
     '2': {
-        img: "images/flower.jpg",
-        name: "꽃을 심어봐요",
+        img: "images/rare/8.jpg",
+        name: "토익독학으로 990점달성, 노하우공유! ",
         progress: 5,
         lecArr: ['강좌 소개, 범위: 바이블 강좌, 강좌의 상위 레벨 키워드, 비동기 11단계', 'Class 선언, Class 구조: Class 선언문, Class 표현식', 'Class 작성 기준, computed name',
-        'constructor, constructor 반환', '상속, extends 키워드, 상속 구조, 메소드 오버라이딩', 'getter, setter, static 메소드, 호이스팅', 'super 키워드, constructor 호출', 'Built-in 오브젝트 상속, Object 상속, Image 오브젝트 상속, Audio 오브젝트 상속', 'this 참조, Generator',
-        '강좌 소개, 범위: 바이블 강좌, 강좌의 상위 레벨 키워드, 비동기 11단계', 'Class 선언, Class 구조: Class 선언문, Class 표현식', 'Class 작성 기준, computed name',
-        'constructor, constructor 반환', '상속, extends 키워드, 상속 구조, 메소드 오버라이딩', 'getter, setter, static 메소드, 호이스팅', 'super 키워드, constructor 호출', 'Built-in 오브젝트 상속, Object 상속, Image 오브젝트 상속, Audio 오브젝트 상속', 'this 참조, Generator'],
+            'constructor, constructor 반환', '상속, extends 키워드, 상속 구조, 메소드 오버라이딩', 'getter, setter, static 메소드, 호이스팅', 'super 키워드, constructor 호출', 'Built-in 오브젝트 상속, Object 상속, Image 오브젝트 상속, Audio 오브젝트 상속', 'this 참조, Generator',
+            '강좌 소개, 범위: 바이블 강좌, 강좌의 상위 레벨 키워드, 비동기 11단계', 'Class 선언, Class 구조: Class 선언문, Class 표현식', 'Class 작성 기준, computed name',
+            'constructor, constructor 반환', '상속, extends 키워드, 상속 구조, 메소드 오버라이딩', 'getter, setter, static 메소드, 호이스팅', 'super 키워드, constructor 호출', 'Built-in 오브젝트 상속, Object 상속, Image 오브젝트 상속, Audio 오브젝트 상속', 'this 참조, Generator'],
     },
     '3': {
-        img: "images/flower.jpg",
-        name: "꽃을 심어봐요",
+        img: "images/pro/9.png",
+        name: "신부자의 c#기초 강의",
         progress: 4,
         lecArr: ['강좌 소개, 범위: 바이블 강좌, 강좌의 상위 레벨 키워드, 비동기 11단계', 'Class 선언, Class 구조: Class 선언문, Class 표현식', 'Class 작성 기준, computed name',
-        'constructor, constructor 반환', '상속, extends 키워드, 상속 구조, 메소드 오버라이딩', 'getter, setter, static 메소드, 호이스팅', 'super 키워드, constructor 호출', 'Built-in 오브젝트 상속, Object 상속, Image 오브젝트 상속, Audio 오브젝트 상속', 'this 참조, Generator',
-        '강좌 소개, 범위: 바이블 강좌, 강좌의 상위 레벨 키워드, 비동기 11단계', 'Class 선언, Class 구조: Class 선언문, Class 표현식', 'Class 작성 기준, computed name',
-        'constructor, constructor 반환', '상속, extends 키워드, 상속 구조, 메소드 오버라이딩', 'getter, setter, static 메소드, 호이스팅', 'super 키워드, constructor 호출', 'Built-in 오브젝트 상속, Object 상속, Image 오브젝트 상속, Audio 오브젝트 상속', 'this 참조, Generator'],
+            'constructor, constructor 반환', '상속, extends 키워드, 상속 구조, 메소드 오버라이딩', 'getter, setter, static 메소드, 호이스팅', 'super 키워드, constructor 호출', 'Built-in 오브젝트 상속, Object 상속, Image 오브젝트 상속, Audio 오브젝트 상속', 'this 참조, Generator',
+            '강좌 소개, 범위: 바이블 강좌, 강좌의 상위 레벨 키워드, 비동기 11단계', 'Class 선언, Class 구조: Class 선언문, Class 표현식', 'Class 작성 기준, computed name',
+            'constructor, constructor 반환', '상속, extends 키워드, 상속 구조, 메소드 오버라이딩', 'getter, setter, static 메소드, 호이스팅', 'super 키워드, constructor 호출', 'Built-in 오브젝트 상속, Object 상속, Image 오브젝트 상속, Audio 오브젝트 상속', 'this 참조, Generator'],
     },
     '4': {
-        img: "images/flower.jpg",
-        name: "꽃을 심어봐요",
+        img: "images/rare/9.jpg",
+        name: "과거 대기업 면접관의 자기소개특강",
         progress: 20,
         lecArr: ['강좌 소개, 범위: 바이블 강좌, 강좌의 상위 레벨 키워드, 비동기 11단계', 'Class 선언, Class 구조: Class 선언문, Class 표현식', 'Class 작성 기준, computed name',
-        'constructor, constructor 반환', '상속, extends 키워드, 상속 구조, 메소드 오버라이딩', 'getter, setter, static 메소드, 호이스팅', 'super 키워드, constructor 호출', 'Built-in 오브젝트 상속, Object 상속, Image 오브젝트 상속, Audio 오브젝트 상속', 'this 참조, Generator',
-        '강좌 소개, 범위: 바이블 강좌, 강좌의 상위 레벨 키워드, 비동기 11단계', 'Class 선언, Class 구조: Class 선언문, Class 표현식', 'Class 작성 기준, computed name',
-        'constructor, constructor 반환', '상속, extends 키워드, 상속 구조, 메소드 오버라이딩', 'getter, setter, static 메소드, 호이스팅', 'super 키워드, constructor 호출', 'Built-in 오브젝트 상속, Object 상속, Image 오브젝트 상속, Audio 오브젝트 상속', 'this 참조, Generator'],
+            'constructor, constructor 반환', '상속, extends 키워드, 상속 구조, 메소드 오버라이딩', 'getter, setter, static 메소드, 호이스팅', 'super 키워드, constructor 호출', 'Built-in 오브젝트 상속, Object 상속, Image 오브젝트 상속, Audio 오브젝트 상속', 'this 참조, Generator',
+            '강좌 소개, 범위: 바이블 강좌, 강좌의 상위 레벨 키워드, 비동기 11단계', 'Class 선언, Class 구조: Class 선언문, Class 표현식', 'Class 작성 기준, computed name',
+            'constructor, constructor 반환', '상속, extends 키워드, 상속 구조, 메소드 오버라이딩', 'getter, setter, static 메소드, 호이스팅', 'super 키워드, constructor 호출', 'Built-in 오브젝트 상속, Object 상속, Image 오브젝트 상속, Audio 오브젝트 상속', 'this 참조, Generator'],
     },
     '5': {
-        img: "images/flower.jpg",
-        name: "꽃을 심어봐요",
-        progress: 7,
+        img: "images/pro/10.png",
+        name: "비전공자들을 위한 JS클래스!",
+        progress: 20,
         lecArr: ['강좌 소개, 범위: 바이블 강좌, 강좌의 상위 레벨 키워드, 비동기 11단계', 'Class 선언, Class 구조: Class 선언문, Class 표현식', 'Class 작성 기준, computed name',
-        'constructor, constructor 반환', '상속, extends 키워드, 상속 구조, 메소드 오버라이딩', 'getter, setter, static 메소드, 호이스팅', 'super 키워드, constructor 호출', 'Built-in 오브젝트 상속, Object 상속, Image 오브젝트 상속, Audio 오브젝트 상속', 'this 참조, Generator',
-        '강좌 소개, 범위: 바이블 강좌, 강좌의 상위 레벨 키워드, 비동기 11단계', 'Class 선언, Class 구조: Class 선언문, Class 표현식', 'Class 작성 기준, computed name',
-        'constructor, constructor 반환', '상속, extends 키워드, 상속 구조, 메소드 오버라이딩', 'getter, setter, static 메소드, 호이스팅', 'super 키워드, constructor 호출', 'Built-in 오브젝트 상속, Object 상속, Image 오브젝트 상속, Audio 오브젝트 상속', 'this 참조, Generator'],
-    },
-    '6': {
-        img: "images/flower.jpg",
-        name: "꽃을 심어봐요",
-        progress: 10,
-        lecArr: ['강좌 소개, 범위: 바이블 강좌, 강좌의 상위 레벨 키워드, 비동기 11단계', 'Class 선언, Class 구조: Class 선언문, Class 표현식', 'Class 작성 기준, computed name',
-        'constructor, constructor 반환', '상속, extends 키워드, 상속 구조, 메소드 오버라이딩', 'getter, setter, static 메소드, 호이스팅', 'super 키워드, constructor 호출', 'Built-in 오브젝트 상속, Object 상속, Image 오브젝트 상속, Audio 오브젝트 상속', 'this 참조, Generator',
-        '강좌 소개, 범위: 바이블 강좌, 강좌의 상위 레벨 키워드, 비동기 11단계', 'Class 선언, Class 구조: Class 선언문, Class 표현식', 'Class 작성 기준, computed name',
-        'constructor, constructor 반환', '상속, extends 키워드, 상속 구조, 메소드 오버라이딩', 'getter, setter, static 메소드, 호이스팅', 'super 키워드, constructor 호출', 'Built-in 오브젝트 상속, Object 상속, Image 오브젝트 상속, Audio 오브젝트 상속', 'this 참조, Generator'],
-    },
-    '7': {
-        img: "images/flower.jpg",
-        name: "꽃을 심어봐요",
-        progress: 3,
-        lecArr: ['강좌 소개, 범위: 바이블 강좌, 강좌의 상위 레벨 키워드, 비동기 11단계', 'Class 선언, Class 구조: Class 선언문, Class 표현식', 'Class 작성 기준, computed name',
-        'constructor, constructor 반환', '상속, extends 키워드, 상속 구조, 메소드 오버라이딩', 'getter, setter, static 메소드, 호이스팅', 'super 키워드, constructor 호출', 'Built-in 오브젝트 상속, Object 상속, Image 오브젝트 상속, Audio 오브젝트 상속', 'this 참조, Generator',
-        '강좌 소개, 범위: 바이블 강좌, 강좌의 상위 레벨 키워드, 비동기 11단계', 'Class 선언, Class 구조: Class 선언문, Class 표현식', 'Class 작성 기준, computed name',
-        'constructor, constructor 반환', '상속, extends 키워드, 상속 구조, 메소드 오버라이딩', 'getter, setter, static 메소드, 호이스팅', 'super 키워드, constructor 호출', 'Built-in 오브젝트 상속, Object 상속, Image 오브젝트 상속, Audio 오브젝트 상속', 'this 참조, Generator'],
-    },
-    '8': {
-        img: "images/flower.jpg",
-        name: "꽃을 심어봐요",
-        progress: 21,
-        lecArr: ['강좌 소개, 범위: 바이블 강좌, 강좌의 상위 레벨 키워드, 비동기 11단계', 'Class 선언, Class 구조: Class 선언문, Class 표현식', 'Class 작성 기준, computed name',
-        'constructor, constructor 반환', '상속, extends 키워드, 상속 구조, 메소드 오버라이딩', 'getter, setter, static 메소드, 호이스팅', 'super 키워드, constructor 호출', 'Built-in 오브젝트 상속, Object 상속, Image 오브젝트 상속, Audio 오브젝트 상속', 'this 참조, Generator',
-        '강좌 소개, 범위: 바이블 강좌, 강좌의 상위 레벨 키워드, 비동기 11단계', 'Class 선언, Class 구조: Class 선언문, Class 표현식', 'Class 작성 기준, computed name',
-        'constructor, constructor 반환', '상속, extends 키워드, 상속 구조, 메소드 오버라이딩', 'getter, setter, static 메소드, 호이스팅', 'super 키워드, constructor 호출', 'Built-in 오브젝트 상속, Object 상속, Image 오브젝트 상속, Audio 오브젝트 상속', 'this 참조, Generator'],
-    },
-    '9': {
-        img: "images/flower.jpg",
-        name: "꽃을 심어봐요",
-        progress: 12,
-        lecArr: ['강좌 소개, 범위: 바이블 강좌, 강좌의 상위 레벨 키워드, 비동기 11단계', 'Class 선언, Class 구조: Class 선언문, Class 표현식', 'Class 작성 기준, computed name',
-        'constructor, constructor 반환', '상속, extends 키워드, 상속 구조, 메소드 오버라이딩', 'getter, setter, static 메소드, 호이스팅', 'super 키워드, constructor 호출', 'Built-in 오브젝트 상속, Object 상속, Image 오브젝트 상속, Audio 오브젝트 상속', 'this 참조, Generator',
-        '강좌 소개, 범위: 바이블 강좌, 강좌의 상위 레벨 키워드, 비동기 11단계', 'Class 선언, Class 구조: Class 선언문, Class 표현식', 'Class 작성 기준, computed name',
-        'constructor, constructor 반환', '상속, extends 키워드, 상속 구조, 메소드 오버라이딩', 'getter, setter, static 메소드, 호이스팅', 'super 키워드, constructor 호출', 'Built-in 오브젝트 상속, Object 상속, Image 오브젝트 상속, Audio 오브젝트 상속', 'this 참조, Generator'],
-    },
-    '10': {
-        img: "images/flower.jpg",
-        name: "꽃을 심어봐요",
-        progress: 15,
-        lecArr: ['강좌 소개, 범위: 바이블 강좌, 강좌의 상위 레벨 키워드, 비동기 11단계', 'Class 선언, Class 구조: Class 선언문, Class 표현식', 'Class 작성 기준, computed name',
-        'constructor, constructor 반환', '상속, extends 키워드, 상속 구조, 메소드 오버라이딩', 'getter, setter, static 메소드, 호이스팅', 'super 키워드, constructor 호출', 'Built-in 오브젝트 상속, Object 상속, Image 오브젝트 상속, Audio 오브젝트 상속', 'this 참조, Generator',
-        '강좌 소개, 범위: 바이블 강좌, 강좌의 상위 레벨 키워드, 비동기 11단계', 'Class 선언, Class 구조: Class 선언문, Class 표현식', 'Class 작성 기준, computed name',
-        'constructor, constructor 반환', '상속, extends 키워드, 상속 구조, 메소드 오버라이딩', 'getter, setter, static 메소드, 호이스팅', 'super 키워드, constructor 호출', 'Built-in 오브젝트 상속, Object 상속, Image 오브젝트 상속, Audio 오브젝트 상속', 'this 참조, Generator'],
+            'constructor, constructor 반환', '상속, extends 키워드, 상속 구조, 메소드 오버라이딩', 'getter, setter, static 메소드, 호이스팅', 'super 키워드, constructor 호출', 'Built-in 오브젝트 상속, Object 상속, Image 오브젝트 상속, Audio 오브젝트 상속', 'this 참조, Generator',
+            '강좌 소개, 범위: 바이블 강좌, 강좌의 상위 레벨 키워드, 비동기 11단계', 'Class 선언, Class 구조: Class 선언문, Class 표현식', 'Class 작성 기준, computed name',
+            'constructor, constructor 반환', '상속, extends 키워드, 상속 구조, 메소드 오버라이딩', 'getter, setter, static 메소드, 호이스팅', 'super 키워드, constructor 호출', 'Built-in 오브젝트 상속, Object 상속, Image 오브젝트 상속, Audio 오브젝트 상속', 'this 참조, Generator'],
     },
 }
 
@@ -150,7 +105,7 @@ function createLecList(obj) {
         lec.appendChild(lecDesc);
         lecList.appendChild(lec);
 
-        
+
     }
 
     //lecContainer.appendChild(lecList);
@@ -163,12 +118,12 @@ function createLecList(obj) {
 createLecList(obj); // 처음에 띄어줌
 
 // 강의 띄어줌
-lecList.addEventListener('click', function(e) {
-    
-    
+lecList.addEventListener('click', function (e) {
+
+
     //console.log(e.target.parentNode);
     //console.log(obj);
-    if (e.target.parentNode.classList.contains('lec') ) {
+    if (e.target.parentNode.classList.contains('lec')) {
         console.log(e.target.parentNode.dataset.key);
         localStorage.setItem('key', e.target.parentNode.dataset.key);
     }

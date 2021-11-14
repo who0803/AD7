@@ -13,7 +13,7 @@ arrow.addEventListener('click', function () {
 
 let flag = 0;
 
-const teacherSay = ['그래 안녕~', '무슨 일이니?', '아 그거는 이렇게 하는거야'];
+const teacherSay = ['무슨일이니?', '그럼 처음접하는 수강생들도 쉽게 따라갈 수 있도록 강의를 구성해놓았단다.', '그래 공부 열심히 하렴~'];
 btn.addEventListener('click', function () {
     if (textarea.value !== '') {
         const text = textarea.value;
@@ -31,7 +31,7 @@ btn.addEventListener('click', function () {
             chatBox.innerHTML = teacherSay[flag];
             primaryFrame.appendChild(chatBox);
             flag++;
-            if (flag == 3) {
+            if (flag == teacherSay.length) {
                 flag = 0;
             }
 

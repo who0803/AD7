@@ -4,7 +4,7 @@
 	height: 100vh;
 	width: 100vw;
 	overflow-x: hidden;
-	/*overflow-y: hidden;*/
+	overflow-y: hidden;
 }
 .header	{
 	display: flex;
@@ -34,6 +34,7 @@
 	position: fixed;
 	bottom: 0;
 	font-weight: bolder;
+	
 }
 .menu-item {
 	flex-grow: 1; 

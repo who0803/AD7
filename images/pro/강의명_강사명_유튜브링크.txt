@@ -1,0 +1,54 @@
+#어드 10개 작성 (프로그래밍)
+1.강의이름 2. 강의사진(썸네일)
+3.강사 이름 4.유튜브 강의링크
+
+
+강의1.파이썬/이민규	
+프로그래밍?파이썬으로 시작!
+https://www.youtube.com/watch?v=kWiCuklohdY
+12000
+
+2.자바/정보경	
+IT취업은 자바! 손쉽게 시작!
+https://www.youtube.com/watch?v=wjLwmWyItWI
+20000
+
+3.C++자료구조/이윤자	
+코딩테스트 준비해?C++로 준비하자!
+https://www.youtube.com/watch?v=rrigSKoA9x0&list=PL4SIC1d_ab-YJQ5lsS1CPzEAT1njDkEG9
+8000
+
+4.알고리즘/강병권		
+30년 개발경력자의 기초알고리즘을 통한 실력향상강의!
+https://www.youtube.com/watch?v=Vo7e9UT2yFQ 
+10000
+
+5.파이썬/장고/양창현	
+트렌드언어 파이썬-Django로 취업하자!
+https://www.youtube.com/watch?v=alrLd9T96aA&list=PLi4xPOplIq7d1vDdLBAvS5PmQR-p6KwUz
+20000
+
+6.스프링/김옥자		
+취업하고싶어? 스프링 쉽게 배우자!
+https://www.youtube.com/watch?v=XtXHIDnzS9c&list=PLq8wAnVUcTFUHYMzoV2RoFoY2HDTKru3T
+15000
+
+7.노드JS/임병철		
+00회사 개발자 출신 임병철의 입문자용 NodeJS강의
+https://www.youtube.com/watch?v=toLDNN4FQv0
+7000
+
+8.스프링부트/최노인	
+Springboot 로 나만의 블로그 만들자!
+https://www.youtube.com/watch?v=HAlcc-HMz7k&list=PLyebPLlVYXCiYdYaWRKgCqvnCFrLEANXt
+6000
+
+9.C#/신부자		
+신부자의 c#기초 강의
+https://www.youtube.com/watch?v=u8T_h3Yn-xQ&list=PL4SIC1d_ab-Y-bBKojxhtFWwNpawMM1h5
+12000
+
+10.JS/박여사	
+비전공자들을 위한 JS클래스!
+https://www.youtube.com/watch?v=PZIPsKgWJiw&list=PLuHgQVnccGMA4uSig3hCjl7wTDeyIeZVU
+13000
