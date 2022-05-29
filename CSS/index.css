@@ -87,7 +87,43 @@
 }
   
 .lec {
+	position: relative;
 	display: flex;
 	flex-direction: column;
 	margin: 10px;
+}
+
+.badge {
+	position: absolute;
+	width: 64px;
+	height: 64px;
+	left: -16px;
+	background-image: url('../images/badge.png');
+	background-position: center;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+/*동영상*/
+.iframebox {
+	display: none;
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+}
+
+.iframebox iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.howToUse {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 1.5rem;
+	font-weight: bolder;
+	margin-top: 1.5rem;
+	cursor: pointer;
 }

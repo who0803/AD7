@@ -68,8 +68,27 @@
 }
 .bin {
     padding: 20px;
+    display: flex;
+    flex-direction: column;
 }
-
+.certification {
+    background-image: url('../images/certification.png');
+    width: 100%;
+    height: 0;	
+    padding-bottom: 60%;
+    margin-bottom: 7px;
+    background-size: contain;
+	background-repeat: no-repeat;
+}
+.evaluation {
+    box-sizing: content-box;
+    font-size: 1.2rem;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid gray;
+    padding: 1rem;
+}
 
 /*동영상*/
 .iframebox {

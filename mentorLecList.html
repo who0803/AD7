@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>노하우</title>
+    <link rel="stylesheet" href="CSS/default.css">
+    <link rel="stylesheet" href="CSS/ui.css">
+    <script src="https://kit.fontawesome.com/5d9d40e7fe.js" crossorigin="anonymous"></script>
+    <style>
+        .header {
+            flex-direction: column;
+            height: 10vh;
+            background-color: white;
+            color: black;
+        }
+
+        .titleCon {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            background-color: rgb(32, 211, 175);
+            color: white;
+        }
+
+        .arrow {
+            position: absolute;
+            height: 40%;
+            width: auto;
+            left: 10px;
+        }
+
+        .primary {
+            margin-top: 10vh;
+            margin-bottom: 66px;
+        }
+
+        .lecContainer {
+            width: 100%;
+            height: 100%;
+        }
+
+        .lecList {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .lec {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            border-bottom: 0.5px solid lightgray;
+        }
+
+        .lecImg {
+            flex-shrink: 0;
+            /*안찌그러지게 고정*/
+            width: 50px;
+            height: 50px;
+            margin-right: 1em;
+            border: 0;
+            border-radius: 30%;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 150%;
+        }
+
+        .lecName {
+            font-weight: bolder;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <div class="page">
+        <!-- header -->
+        <header class="header">
+            <div class='titleCon'>
+                <img class="arrow" src="images/back_arrow.png" alt="">
+                <h1 class="website-title">강의 목록</h1>
+            </div>
+        </header>
+
+
+        <!-- primary -->
+        <section class="primary">
+
+        </section>
+
+    </div>
+    <script>
+        (() => {
+            obj = {
+                '0': {
+                    img: "images/pro/1.png",
+                    lecName: "프로그래밍?파이썬으로 시작!",
+
+                },
+                '1': {
+                    img: "images/rare/5.jpg",
+                    lecName: "카페사장의 바리스타 특강",
+
+                },
+                '2': {
+                    img: "images/rare/8.jpg",
+                    lecName: "토익독학으로 990점달성, 노하우공유!",
+                },
+
+            }
+
+            const primary = document.querySelector('.primary');
+            const arrow = document.querySelector('.arrow');
+
+
+
+            let flag = true;
+
+            arrow.addEventListener('click', function () {
+                location.href = 'mentor.html';
+            });
+
+
+            function createChat(obj) {
+                const lecContainer = document.createElement('div');
+                lecContainer.classList.add('lecContainer');
+
+                const lecList = document.createElement('div');
+                lecList.classList.add('lecList');
+
+                for (key in obj) {
+                    const lec = document.createElement('div');
+                    lec.classList.add('lec');
+                    lec.dataset.key = key;
+
+                    const lecImg = document.createElement('div');
+                    lecImg.classList.add('lecImg');
+                    lecImg.style.backgroundImage = "url(" + obj[key].img + ")";
+
+
+                    const lecName = document.createElement('div');
+                    lecName.classList.add('lecName');
+                    lecName.innerHTML = obj[key].lecName;
+
+                    lec.appendChild(lecImg);
+                    lec.appendChild(lecName);
+                    lecList.appendChild(lec);
+
+                    lec.addEventListener('click', function () {
+                        // 나중에 시간 나면 구현
+                        localStorage.setItem('lecName', obj[lec.dataset.key].lecName);
+                        location.href = 'mentorChatList.html';
+                    });
+
+
+                }
+
+
+                lecContainer.appendChild(lecList);
+                primary.appendChild(lecContainer);
+
+            }
+            createChat(obj);
+        })();
+    </script>
+</body>
+
+</html>

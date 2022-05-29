@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #line-chart {
+            max-width: 50vw;
+            max-height: 50vh;
+        }
+    </style>
+</head>
+
+<body>
+
+    <canvas id="line-chart" width="300" height="250"></canvas>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <script>
+        new Chart(document.getElementById("line-chart"), {
+            type: 'line',
+            data: {
+                labels: [5000, 10000, 15000, 20000, 25000, 30000, 35000, 40000, 45000, 50000],
+                datasets: [{
+                    data: [25, 12, 6, 13, 25, 30, 22, 11, 6, 3],
+                    label: "수요조사 가격",
+                    borderColor: "#3e95cd",
+                    fill: false
+                }]
+            },
+            options: {
+                title: {
+                    display: true,
+                    text: '수요조사 그래프'
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

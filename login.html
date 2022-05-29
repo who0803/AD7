@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>노하우</title>
+    <link rel="stylesheet" href="CSS/default.css">
+    <script src="https://kit.fontawesome.com/5d9d40e7fe.js" crossorigin="anonymous"></script>
+    <style>
+        .login-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100vw;
+            height: 100vh;
+            background-color: ivory;
+
+        }
+
+        h1 {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            color: rgb(26, 188, 156);
+            cursor: pointer;
+        }
+
+        h2 {
+            display: flex;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: rgb(150, 143, 143);
+            align-self: flex-start;
+        }
+
+        img {
+            align-self: center;
+            margin-right: 0.7rem;
+            width: 2rem;
+        }
+
+        #loginContainer {
+            background: white;
+            margin-top: 1rem;
+            border: 2px solid rgb(26, 188, 156);
+            box-sizing: content-box;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 60%;
+            height: 40%;
+            /*min-width: 200px;*/
+        }
+
+        .in {
+            border: none;
+            border-bottom: 2px solid rgb(26, 188, 156);
+            display: block;
+            width: 100%;
+            height: 20%;
+            margin-bottom: 1rem;
+        }
+
+        .btn {
+            width: 100%;
+            height: 15%;
+            display: block;
+            color: white;
+            font-size: 1rem;
+            background: rgb(26, 188, 156);
+            border: none;
+            border-radius: 10px;
+
+        }
+
+
+        a {
+            align-self: flex-start;
+            margin-bottom: 1rem;
+            text-decoration: none;
+            color: rgb(150, 143, 143);
+        }
+
+        .select {
+            display: flex;
+            background: white;
+            border: 2px solid rgb(26, 188, 156);
+
+            margin-top: 2rem;
+            width: 60%;
+            height: 5%;
+        }
+
+        .ment {
+            height: 100%;
+            width: 50%;
+            font-size: 1.2rem;
+            font-weight: bolder;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: gray;
+        }
+
+        .mentee {
+            border-right: 0.5px solid gray;
+        }
+
+        .mentor {
+            border-left: 0.5px solid gray;
+        }
+
+        .act {
+            background-color: lightgray;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="login-box">
+        <header>
+            <h1 onclick="location.href = 'login.html'">노하우</h1>
+        </header>
+        <div class='select'>
+            <div class='mentee ment act'><span>멘티</span></div>
+            <div class='mentor ment'><span>멘토</span></div>
+        </div>
+        <div id="loginContainer">
+            <h2><img src="images/icon.png">Login</h2>
+            <input type="text" class="in" name="id" placeholder="Username" id="idTxt" autofocus>
+            <input type="password" class="in" name="pwd" id="password" placeholder="Password">
+            <div id="errMessage"></div>
+            <a>☛ Sign up</a>
+            <button type="button" class="btn members">Login</button>
+        </div>
+    </div>
+    <script>
+        const mentee = document.querySelector('.mentee');
+        const mentor = document.querySelector('.mentor');
+        const button = document.querySelector('button');
+
+        let flag;
+        mentee.addEventListener('click', function () {
+            mentee.classList.add('act');
+            mentor.classList.remove('act');
+            flag = true;
+        });
+        mentor.addEventListener('click', function () {
+            mentor.classList.add('act');
+            mentee.classList.remove('act');
+            flag = false;
+        });
+        button.addEventListener('click', function () {
+            if (flag) location.href = 'index.html';
+            else location.href = 'mentor.html';
+        });
+        mentee.click();
+    </script>
+</body>
+
+</html>

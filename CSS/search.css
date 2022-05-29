@@ -76,12 +76,22 @@
 }
 
 .lec {
+    position: relative;
     width: 50%;
     display: flex;
     flex-direction: column;
     padding: 1rem 1rem;
 }
-
+.badge {
+	position: absolute;
+	width: 64px;
+	height: 64px;
+	left: -16px;
+	background-image: url('../images/badge.png');
+	background-position: center;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
 .lecImg {
     /*min-width: 140px;
     min-height: 91px;*/

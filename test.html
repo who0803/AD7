@@ -2,41 +2,23 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>노하우</title>
-    <link rel="stylesheet" href="CSS/default.css">
-    <link rel="stylesheet" href="CSS/ui.css">
-    <link rel="stylesheet" href="CSS/chatScreen.css">
-    <script src="https://kit.fontawesome.com/5d9d40e7fe.js" crossorigin="anonymous"></script>
-    
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Speech Application</title>
+    <style>
+        button {
+            width: 100px;
+            height: 100px;
+            border: 1px solid gray;
+        }
+    </style>
 </head>
 
 <body>
-    <div class="page">
-        <!-- header -->
-        <header class="header">
-            <img class="arrow" src="images/back_arrow.png" alt="">
-            <h1 class="website-title"></h1>
-        </header>
-
-
-        <!-- primary -->
-        <section class="primary">
-            <div class="primaryFrame"></div>
-        </section>
-        <div class='chatt-container'>
-            <div class="chatt-form">
-                <textarea cols="50" rows="1"></textarea>
-                <button class='mainchatt mic'><i class="fa fa-microphone" aria-hidden="true"></i></button>
-                <button class='mainchatt mainbtn'>전송</button>
-            </div>
-        </div>
-    </div>
-    <script src="JS/chatScreen.js"></script>
+    <div class="words"></div>
+    <button></button>
     <script>
-
+        const button = document.querySelector('button');
         window.SpeechRecognition =
             window.SpeechRecognition || window.webkitSpeechRecognition;
 
@@ -57,8 +39,8 @@
         let p = document.createElement("p");
         p.classList.add("para");
 
-        let words = document.querySelector("textarea");
-        //words.appendChild(p);
+        let words = document.querySelector(".words");
+        words.appendChild(p);
 
         let speechToText = "";
         recognition.addEventListener("result", (e) => {
@@ -72,18 +54,16 @@
                     interimTranscript += transcript;
                 }
             }
-            words.value = speechToText + interimTranscript;
-            speechToText = '';
-            interimTranscript = '';
-            //document.querySelector(".para").innerHTML = speechToText + interimTranscript;
+            document.querySelector(".para").innerHTML = speechToText + interimTranscript;
         });
-        const mic = document.querySelector('.mic');
+        
         // 음성인식이 끝나면 자동으로 재시작합니다.
         // recognition.addEventListener("end", recognition.start);
-        mic.addEventListener('click', ()=> {
+        button.addEventListener('click', ()=> {
             // 음성 인식 시작
             recognition.start();
         });
+        
     </script>
 </body>
 

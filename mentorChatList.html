@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>노하우</title>
+    <link rel="stylesheet" href="CSS/default.css">
+    <link rel="stylesheet" href="CSS/ui.css">
+    <script src="https://kit.fontawesome.com/5d9d40e7fe.js" crossorigin="anonymous"></script>
+    <style>
+        .header {
+            flex-direction: column;
+            height: 10vh;
+            background-color: white;
+            color: black;
+        }
+
+        .titleCon {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            background-color: rgb(32, 211, 175);
+            color: white;
+        }
+
+        .website-title {
+            font-size: 1.5rem;
+        }
+
+        .arrow {
+            position: absolute;
+            height: 40%;
+            width: auto;
+            left: 10px;
+        }
+
+        .primary {
+            margin-top: 10vh;
+            margin-bottom: 66px;
+        }
+
+        .chatContainer {
+            width: 100%;
+            height: 100%;
+        }
+
+        .chatList {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .chat {
+            display: flex;
+            padding: 10px;
+            border-bottom: 0.5px solid lightgray;
+        }
+
+
+        .userImg {
+            flex-shrink: 0;
+            /*안찌그러지게 고정*/
+            width: 50px;
+            height: 50px;
+            margin-right: 1em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5rem;
+        }
+
+        .chatDecs {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            font-weight: bolder;
+        }
+
+        .id {
+
+            padding-bottom: 2px;
+        }
+
+        .userChat {
+            color: gray;
+            padding-top: 2px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page">
+        <!-- header -->
+        <header class="header">
+            <div class='titleCon'>
+                <img class="arrow" src="images/back_arrow.png" alt="">
+                <h1 class="website-title"></h1>
+            </div>
+        </header>
+
+
+        <!-- primary -->
+        <section class="primary">
+
+        </section>
+
+    </div>
+    <script>
+        (() => {
+            obj = {
+                '0': {
+                    id: "0803hj",
+                    chat: ['선생님 질문있습니다.', '이거 어떻게 하는 건가요?', '감사합니다.'],
+
+                },
+                '1': {
+                    id: "10rlatkdtn",
+                    chat: ['선생님!', '이거 어떻게 하는 건가요?', '감사합니다.'],
+
+                },
+                '2': {
+                    id: "who0803",
+                    chat: ['감사합니다'],
+                },
+                '3': {
+                    id: "elonWho123",
+                    chat: ['열심히 하겠습니다.'],
+                },
+                '4': {
+                    id: "08basick",
+                    chat: ['넵 알겠습니다!'],
+                },
+
+            }
+            const websiteTitle = document.querySelector('.website-title');
+            const primary = document.querySelector('.primary');
+            const arrow = document.querySelector('.arrow');
+            websiteTitle.innerHTML = localStorage.getItem('lecName');
+
+
+            let flag = true;
+
+            arrow.addEventListener('click', function () {
+                location.href = 'mentorLecList.html';
+            });
+
+
+            function createChat(obj) {
+                const chatContainer = document.createElement('div');
+                chatContainer.classList.add('chatContainer');
+
+                const chatList = document.createElement('div');
+                chatList.classList.add('chatList');
+
+                for (key in obj) {
+                    const chat = document.createElement('div');
+                    chat.classList.add('chat');
+                    chat.dataset.key = key;
+
+                    const userImg = document.createElement('div');
+                    userImg.classList.add('userImg');
+                    userImg.innerHTML = `<i class="fa fa-user" aria-hidden="true"></i>`;
+
+                    const chatDecs = document.createElement('div');
+                    chatDecs.classList.add('chatDecs');
+
+                    const id = document.createElement('div');
+                    id.classList.add('id');
+                    id.innerHTML = obj[key].id;
+
+                    const userChat = document.createElement('div');
+                    userChat.classList.add('userChat');
+                    userChat.innerHTML = obj[key].chat[0];
+
+                    chatDecs.appendChild(id);
+                    chatDecs.appendChild(userChat);
+                    chat.appendChild(userImg);
+                    chat.appendChild(chatDecs);
+                    chatList.appendChild(chat);
+
+                    chat.addEventListener('click', function () {
+                        // 나중에 시간 나면 구현
+                        localStorage.setItem('teacherName', obj[chat.dataset.key].id);
+                        localStorage.setItem('userSay', JSON.stringify(obj[chat.dataset.key].chat));
+                        location.href = 'mentorChatScreen.html';
+                    });
+
+
+                }
+
+
+                chatContainer.appendChild(chatList);
+                primary.appendChild(chatContainer);
+
+            }
+            createChat(obj);
+        })();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>노하우</title>
+    <link rel="stylesheet" href="CSS/default.css">
+    <link rel="stylesheet" href="CSS/ui.css">
+    <script src="https://kit.fontawesome.com/5d9d40e7fe.js" crossorigin="anonymous"></script>
+    <style>
+        .header {
+            flex-direction: column;
+            height: 15vh;
+            background-color: white;
+            color: black;
+        }
+
+        .titleCon {
+            width: 100%;
+            height: 65%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            background-color: rgb(32, 211, 175);
+            color: white;
+            
+        }
+        .website-title {
+            font-size: 1.2rem;
+        }
+        .arrow {
+            position: absolute;
+            height: 40%;
+            width: auto;
+            left: 10px;
+        }
+
+        .options {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 35%;
+            width: 100%;
+            color: rgb(152, 152, 152);
+            border-bottom: 1px solid black;
+            border-top: 1px solid black;
+            font-weight: bolder;
+            cursor: pointer;
+            font-size: 1.2rem;
+        }
+
+        .actBorderBot {
+            color:black;
+        }
+        .primary {
+            margin-top: 15vh;
+            margin-bottom: 66px;
+        }
+
+
+        .writingContainer {
+            width: 100%;
+            height: 100%;
+        }
+
+        .writingList {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .writing {
+            display: flex;
+            padding: 10px;
+            border-bottom: 0.5px solid lightgray;
+        }
+
+        .writingDesc {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            font-weight: bolder;
+        }
+
+        .writingName {
+
+            padding-bottom: 2px;
+        }
+
+        .writingUserName {
+            color: gray;
+            padding-top: 2px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="page">
+        <!-- header -->
+        <header class="header">
+            <div class='titleCon'>
+                <img class="arrow" src="images/back_arrow.png" alt="">
+                <h1 class="website-title"></h1>
+            </div>
+            <div class="options actBorderBot">
+                글쓰기
+            </div>
+        </header>
+
+
+        <!-- primary -->
+        <section class="primary">
+
+        </section>
+        <div class="menu">
+            <div class="menu-item chatMenu">
+                <i class="fas fa-comments"></i>
+                <div>소통</div>
+            </div>
+            <div class="menu-item homeMenu">
+                <i class="fas fa-home"></i>
+                <div>홈</div>
+            </div>
+            <div class="menu-item lectureMenu">
+                <i class="fas fa-book-open"></i>
+                <div>내 강의</div>
+            </div>
+        </div>
+    </div>
+    <script src="JS/menu.js"></script>
+    <script>
+        (() => {
+            obj = {
+                '0': {
+                    writingName: "정말 강의 잘 만들었네요",
+                    userName: "elonMusk123"
+                },
+                '1': {
+                    writingName: "이거 이렇게 하는 거 맞나?",
+                    userName: "08_Basick"
+                },
+                '2': {
+                    writingName: "이 강의 이 정도 가격이면 가성비 갑인 듯?",
+                    userName: "goSpace"
+                },
+                '3': {
+                    writingName: "아 학점 잘 받고 싶다...",
+                    userName: "0803hj"
+                },
+                '4': {
+                    writingName: "이렇게 열심히 했는데 좋은 결과 있겠죠??",
+                    userName: "10rlatkdtn"
+                },
+                '5': {
+                    writingName: "역시 교수님!!!!!",
+                    userName: "who0803"
+                },
+                '6': {
+                    writingName: "이 강의 따라올 수 있는 강의 없는 것 같네요",
+                    userName: "elonMusk123"
+                },
+                '7': {
+                    writingName: "오늘도 밤새서 공부...",
+                    userName: "08_Basick"
+                },
+
+
+
+            }
+
+            const primary = document.querySelector('.primary');
+            const arrow = document.querySelector('.arrow');
+            const websiteTitle = document.querySelector('.website-title');
+            const lecName = localStorage.getItem('lecName');
+            websiteTitle.innerHTML = lecName;
+            const options = document.querySelector('.options');
+
+            let flag = true;
+
+            const writingName2 = localStorage.getItem('writingName2');
+            const userName2 = localStorage.getItem('userName2');
+            
+            console.log(writingName2);
+            console.log(userName2);
+            options.addEventListener('click', () => {
+                location.href = 'writing.html';
+            });
+
+            arrow.addEventListener('click', function () {
+                location.href = 'chat.html';
+            });
+
+
+
+            function createWriting(obj, writingName2, userName2) {
+                const writingContainer = document.createElement('div');
+                writingContainer.classList.add('writingContainer');
+
+                const writingList = document.createElement('div');
+                writingList.classList.add('writingList');
+
+                if (writingName2) { // null이 아니면
+                    const writing = document.createElement('div');
+                    writing.classList.add('writing');
+            
+                    const writingDesc = document.createElement('div');
+                    writingDesc.classList.add('writingDesc');
+
+                    const writingName = document.createElement('div');
+                    writingName.classList.add('writingName');
+                    writingName.innerHTML = writingName2;
+
+                    const writingUserName = document.createElement('div');
+                    writingUserName.classList.add('writingUserName');
+                    writingUserName.innerHTML = "user : " + userName2;
+
+                    writingDesc.appendChild(writingName);
+                    writingDesc.appendChild(writingUserName);
+                    writing.appendChild(writingDesc);
+                    writingList.appendChild(writing);
+
+                    localStorage.removeItem('writingName2');
+                    localStorage.removeItem('userName2');
+                }
+
+                for (key in obj) {
+                    const writing = document.createElement('div');
+                    writing.classList.add('writing');
+                    writing.dataset.key = key;
+
+
+                    const writingDesc = document.createElement('div');
+                    writingDesc.classList.add('writingDesc');
+
+                    const writingName = document.createElement('div');
+                    writingName.classList.add('writingName');
+                    writingName.innerHTML = obj[key].writingName;
+
+                    const writingUserName = document.createElement('div');
+                    writingUserName.classList.add('writingUserName');
+                    writingUserName.innerHTML = "user : " + obj[key].userName;
+
+                    writingDesc.appendChild(writingName);
+                    writingDesc.appendChild(writingUserName);
+                    writing.appendChild(writingDesc);
+                    writingList.appendChild(writing);
+
+                }
+
+
+                writingContainer.appendChild(writingList);
+                primary.appendChild(writingContainer);
+
+            }
+            createWriting(obj, writingName2, userName2);
+        })();
+    </script>
+</body>
+
+</html>

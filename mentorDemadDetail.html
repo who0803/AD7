@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>노하우</title>
+    <link rel="stylesheet" href="CSS/default.css">
+    <link rel="stylesheet" href="CSS/ui.css">
+    <script src="https://kit.fontawesome.com/5d9d40e7fe.js" crossorigin="anonymous"></script>
+    <style>
+        .header {
+            flex-direction: column;
+            height: 10vh;
+            background-color: white;
+            color: black;
+        }
+
+        .titleCon {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            background-color: rgb(32, 211, 175);
+            color: white;
+        }
+
+        .website-title {
+            font-size: 1.5rem;
+        }
+
+        .arrow {
+            position: absolute;
+            height: 40%;
+            width: auto;
+            left: 10px;
+        }
+
+        .primary {
+            padding: 2rem;
+            margin-top: 10vh;
+            margin-bottom: 0;
+        }
+
+        #line-chart {
+            width: 80%;
+            height: 70%;
+        }
+
+        .lecProgress {
+            color: blue;
+            font-weight: bolder;
+        }
+
+        progress {
+            min-width: 100%;
+            min-height: 2rem;
+        }
+
+        .analysis {
+            margin-top: 2rem;
+            border: 4px solid gray;
+            background-color: rgb(238, 238, 238);
+            padding: 2rem;
+        }
+
+        .analysisName {
+            text-align: center;
+            padding-bottom: 2rem;
+            font-size: 2rem;
+            font-weight: bolder;
+            color: black;
+        }
+
+        .analy {
+            padding-bottom: 1.2rem;
+            font-size: 1.2rem;
+            font-weight: bolder;
+        }
+
+        .inputDiv {
+            display: flex;
+            height: 40px;
+            width: 90%;
+            margin: 30px auto;
+            border-radius: 0.3em;
+            border: 1px gray solid;
+            box-sizing: content-box;
+        }
+
+        input {
+            flex: 1;
+            min-width: 0;
+            margin-right: 5px;
+            font-size: 1rem;
+            border: none;
+            box-sizing: content-box;
+        }
+
+        button {
+            width: 15%;
+            font-size: 1.2rem;
+            background: rgb(32, 211, 175);
+            color: white;
+            border: none;
+            box-sizing: content-box;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page">
+        <!-- header -->
+        <header class="header">
+            <div class='titleCon'>
+                <img class="arrow" src="images/back_arrow.png" alt="">
+                <h1 class="website-title">수요조사 강의 목록</h1>
+            </div>
+        </header>
+
+
+        <!-- primary -->
+        <section class="primary">
+            <canvas id="line-chart" width="300" height="250"></canvas>
+            <div class="lecProgress"></div>
+            <div class="analysis">
+                <div class='analysisName'>-수요조사 분석-</div>
+                <div class="average analy"></div>
+                <div class="min analy"></div>
+                <div class="max analy"></div>
+                <div class="peopleNum analy"></div>
+                <div class="mode analy"></div>
+            </div>
+
+        </section>
+
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <script>
+        (() => {
+
+            const primary = document.querySelector('.primary');
+            const arrow = document.querySelector('.arrow');
+            const websiteTitle = document.querySelector('.website-title');
+            const lecProgress = document.querySelector('.lecProgress');
+            const average = document.querySelector('.average');
+            const min = document.querySelector('.min');
+            const max = document.querySelector('.max');
+            const peopleNum = document.querySelector('.peopleNum');
+            const mode = document.querySelector('.mode');
+
+
+            websiteTitle.innerHTML = localStorage.getItem('lecName');
+            //const labels = [5000, 10000, 15000, 20000, 25000, 30000, 35000, 40000, 45000, 50000];
+            //const data = [25, 12, 6, 13, 25, 30, 22, 11, 6, 3];
+
+            arrow.addEventListener('click', function () {
+                location.href = 'mentordemandList.html';
+            });
+
+            new Chart(document.getElementById("line-chart"), {
+                type: 'line',
+                data: {
+                    labels: [5000, 10000, 15000, 20000, 25000, 30000, 35000, 40000, 45000, 50000],
+                    datasets: [{
+                        data: [25, 12, 6, 13, 25, 30, 22, 11, 6, 3],
+                        label: "수요조사 가격",
+                        borderColor: "#3e95cd",
+                        fill: false
+                    }]
+                },
+                options: {
+                    title: {
+                        display: true,
+                        text: '수요조사 그래프'
+                    }
+                }
+            });
+            //console.log(Boolean(localStorage.getItem('compFlag')));
+            lecProgress.innerHTML = `<progress value= "${30 - localStorage.getItem('lecProgress')}" max="30"></progress>`;
+            average.innerHTML = `평균 : ${Math.floor(3750000 / 153)} 원`;
+            min.innerHTML = `최소값 : 5000 원`;
+            max.innerHTML = `최대값 : 50000 원`;
+            peopleNum.innerHTML = `참여자 수 : 153 명`;
+            mode.innerHTML = `최빈값 : 30000 원`;
+
+
+
+            //console.log(JSON.parse(localStorage.getItem('compFlag')));
+            if (JSON.parse(localStorage.getItem('compFlag'))) { // 수요조사 완료했으면
+                const inputDiv = document.createElement('div');
+                inputDiv.classList.add('inputDiv');
+                const input = document.createElement('input');
+                input.placeholder = '강의 가격을 결정해주세요.';
+                const btn = document.createElement('button');
+                btn.innerHTML = '입력';
+                inputDiv.appendChild(input);
+                inputDiv.appendChild(btn);
+                primary.appendChild(inputDiv);
+            }
+        })();
+    </script>
+</body>
+
+</html>

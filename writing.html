@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>노하우</title>
+    <link rel="stylesheet" href="CSS/default.css">
+    <link rel="stylesheet" href="CSS/ui.css">
+    <script src="https://kit.fontawesome.com/5d9d40e7fe.js" crossorigin="anonymous"></script>
+    <style>
+        .header {
+            height: 10vh;
+            background-color: white;
+            color: black;
+        }
+
+        .titleCon {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            background-color: rgb(32, 211, 175);
+            color: white;
+        }
+
+        .arrow {
+            position: absolute;
+            height: 40%;
+            width: auto;
+            left: 10px;
+        }
+        .primary {
+            margin-top: 10vh;
+            margin-bottom: 66px;
+        }
+        .writingContainer {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            
+            align-items: center;
+        }
+        .writing {
+            margin-top: 20px;
+            border: 1px solid gray;
+            width: 85%;
+        }
+        input {
+            font-size: 1.2rem;
+            height: 2rem;
+        }
+        textarea {
+            font-size: 1.2rem;
+            height: 70%;
+        }
+        button {
+            background-color: rgb(32, 211, 175);
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bolder;
+            height: 10%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page">
+        <header class="header">
+            <div class='titleCon'>
+                <img class="arrow" src="images/back_arrow.png" alt="">
+                <h1 class="website-title">글쓰기</h1>
+            </div>
+        </header>
+        <section class="primary">
+            <div class="writingContainer">
+                <input type="text" class="writing" placeholder="제목">
+                <textarea class="writing" cols="50" rows="10" placeholder="내용"></textarea>
+                <button class="writing">등 록</button>
+            </div>
+        </section>
+        
+        </section>
+        <div class="menu">
+            <div class="menu-item chatMenu">
+                <i class="fas fa-comments"></i>
+                <div>소통</div>
+            </div>
+            <div class="menu-item homeMenu">
+                <i class="fas fa-home"></i>
+                <div>홈</div>
+            </div>
+            <div class="menu-item lectureMenu">
+                <i class="fas fa-book-open"></i>
+                <div>내 강의</div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="JS/menu.js"></script>
+    <script>
+        (()=>{
+            const button = document.querySelector('button');
+            const input = document.querySelector('input');
+            const textarea = document.querySelector('textarea');
+            const arrow = document.querySelector('.arrow');
+
+            button.addEventListener('click', () => {
+                localStorage.setItem('writingName2', input.value);
+                localStorage.setItem('userName2', 'user123');
+                location.href = 'community.html';
+            });
+
+            arrow.addEventListener('click', function () {
+                location.href = 'community.html';
+            });
+        })();
+    </script>
+</body>
+
+</html>

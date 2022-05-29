@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>노하우</title>
+    <link rel="stylesheet" href="CSS/default.css">
+    <link rel="stylesheet" href="CSS/ui.css">
+    <script src="https://kit.fontawesome.com/5d9d40e7fe.js" crossorigin="anonymous"></script>
+    <style>
+        .header {
+            flex-direction: column;
+            background-color: white;
+            color: black;
+        }
+
+        .titleCon {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            background-color: rgb(32, 211, 175);
+            color: white;
+        }
+
+        .arrow {
+            position: absolute;
+            height: 40%;
+            width: auto;
+            left: 10px;
+        }
+
+        .mentorContainer {
+            display: flex;
+            flex-direction: column;
+            width: 85%;
+            height: 100%;
+            margin: 0 auto;
+        }
+
+        .mentorMenu {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            height: 20%;
+            margin-top: 5%;
+            border: 5px solid rgb(32, 211, 175);
+            border-radius: 10px;
+
+            font-size: 2rem;
+            font-weight: bolder;
+            cursor: pointer;
+        }
+
+        .fa {
+            color: rgb(32, 211, 175);
+            text-align: center;
+            width: 15%;
+            padding: 0 5%;
+        }
+
+        .name {
+            width: 70%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page">
+        <!-- header -->
+        <header class="header">
+            <div class='titleCon'>
+				<img class="arrow" src="images/back_arrow.png" alt="">
+				<h1 class="website-title">노하우</h1>
+			</div>
+            <!-- <div id="modal-switch">⚑</div> -->
+        </header>
+
+
+        <!-- <div class="content-container"> -->
+        <!-- primary -->
+        <section class="primary">
+
+
+            <div class="mentorContainer">
+                <div class="mentorChat mentorMenu"><i class="fa fa-commenting" aria-hidden="true"></i>
+                    <div class='mentorChatName name'>채 팅</div><i class="fa fa-arrow-circle-right"
+                        aria-hidden="true"></i>
+                </div>
+                <div class="mentorDemand mentorMenu"><i class="fa fa-bar-chart" aria-hidden="true"></i>
+                    <div class='mentorDemandName name'>수요조사</div><i class="fa fa-arrow-circle-right"
+                        aria-hidden="true"></i>
+                </div>
+                <div class="UploadUdate mentorMenu"><i class="fa fa-upload" aria-hidden="true"></i>
+                    <div class='UploadUdateName name'>강의관리</div><i class="fa fa-arrow-circle-right"
+                        aria-hidden="true"></i>
+                </div>
+                <div class="remoteControl mentorMenu"><i class="fa fa-user" aria-hidden="true"></i>
+                    <div class='remoteControlName name'>원격신청</div><i class="fa fa-arrow-circle-right"
+                        aria-hidden="true"></i>
+                </div>
+            </div>
+
+
+        </section>
+
+    </div>
+    <script>
+        (() => {
+            const arrow = document.querySelector('.arrow');
+            arrow.addEventListener('click', () => {
+                location.href = 'login.html';
+            });
+            const mentorChat = document.querySelector('.mentorChat');
+            const mentorDemand = document.querySelector('.mentorDemand');
+
+            mentorChat.addEventListener('click', () => {
+                location.href = 'mentorLecList.html';
+            });
+
+            mentorDemand.addEventListener('click', () => {
+                location.href = 'mentordemandList.html';
+            });
+        })();
+    </script>
+</body>
+
+</html>
